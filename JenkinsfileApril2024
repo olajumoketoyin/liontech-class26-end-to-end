@@ -1,1 +1,6 @@
-
+node {
+    def mavenHome = tool name: "maven3.9.6" 
+    stage('1.pullfromgithub'){
+        git "https://github.com/olajumoketoyin/liontech-class26-end-to-end.git"
+    }
+}
