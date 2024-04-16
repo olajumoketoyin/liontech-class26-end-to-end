@@ -3,4 +3,7 @@ node {
     stage('1.pullfromgithub'){
         git "https://github.com/olajumoketoyin/liontech-class26-end-to-end.git"
     }
+    stage('2.build'){
+        sh "${mavenHome}/bin/mvn clean package"
+    }
 }
